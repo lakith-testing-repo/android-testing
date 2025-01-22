@@ -72,4 +72,10 @@ public class MainActivity extends AppCompatActivity {
     public void stopService(View view) {
         stopService(new Intent(getBaseContext(), MyService.class));
     }
+
+    public void broadcastIntent(View view) {
+        Intent intent = new Intent();
+        intent.setAction("com.lakithrathnayake.CUSTOM_INTENT");
+        sendBroadcast(intent);
+    }
 }
