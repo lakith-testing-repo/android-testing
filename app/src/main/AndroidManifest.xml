@@ -29,10 +29,10 @@
 <!--                <action android:name="android.intent.action.BOOT_COMPLETED" >-->
 <!--                </action>-->
 <!--            </intent-filter>-->
-            <intent-filter>
-                <action android:name="com.lakithrathnayake.CUSTOM_INTENT" >
-                </action>
-            </intent-filter>
+<!--            <intent-filter>-->
+<!--                <action android:name="com.lakithrathnayake.CUSTOM_INTENT" >-->
+<!--                </action>-->
+<!--            </intent-filter>-->
         </receiver>
     </application>
 
