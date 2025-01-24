@@ -1,7 +1,11 @@
 package com.lakithrathnayake.myapplication01;
 
+import android.annotation.SuppressLint;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -33,6 +37,25 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         Log.d(msg, "The onCreate() event");
+
+        Configuration config = getResources().getConfiguration();
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        if (config.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            /**
+             * Landscape mode of the device
+             */
+            LM_Fragment ls_fragment = new LM_Fragment();
+            fragmentTransaction.replace(android.R.id.content, ls_fragment);
+        }else{
+            /**
+             * Portrait mode of the device
+             */
+            PM_Fragment pm_fragment = new PM_Fragment();
+            fragmentTransaction.replace(android.R.id.content, pm_fragment);
+        }
+        fragmentTransaction.commit();
     }
 
 
@@ -96,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @SuppressLint("Range")
     public void onClickRetrieveStudents(View view) {
         String URL = "content://com.lakithrathnayake.myapplication01.StudentProvider";
 
