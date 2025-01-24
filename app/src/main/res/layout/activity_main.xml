@@ -17,23 +17,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.053" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/imageButton"
-        android:layout_centerHorizontal="true"
-        android:text="@string/services_tutorial"
-        android:textColor="#ff87ff09"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
-        app:layout_constraintVertical_bias="0.5" />
+    <!--    <Button-->
+    <!--        android:id="@+id/button2"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/imageButton"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:onClick="startService"-->
+    <!--        android:text="Start Services"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/button"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/imageButton"-->
+    <!--        app:layout_constraintVertical_bias="0.5" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/button2"-->
+    <!--        android:layout_alignStart="@+id/button2"-->
+    <!--        android:layout_alignEnd="@+id/button2"-->
+    <!--        android:onClick="stopService"-->
+    <!--        android:text="Stop Services"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/button3"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/button2"-->
+    <!--        app:layout_constraintVertical_bias="0.5" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button3"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/imageButton"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginTop="551dp"-->
+    <!--        android:layout_marginBottom="132dp"-->
+    <!--        android:onClick="broadcastIntent"-->
+    <!--        android:text="Broadcast Intent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.498"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.0" />-->
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -41,28 +73,69 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="527dp"
         android:src="@drawable/farms"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageButton"
-        android:layout_centerHorizontal="true"
-        android:onClick="startService"
-        android:text="Start Services"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:layout_below="@+id/editText3"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="405dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="278dp"
+        android:onClick="onClickAddName"
+        android:text="Add Name"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="127dp"
+        android:layout_height="41dp"
+        android:layout_alignStart="@+id/textView1"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignEnd="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="426dp"
+        android:hint="Name"
+        android:textColorHint="@android:color/holo_blue_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="122dp"
+        android:layout_height="38dp"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="325dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="368dp"
+        android:hint="Grade"
+        android:textColorHint="@android:color/holo_blue_bright"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
@@ -70,31 +143,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button2"
         android:layout_alignStart="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
-        android:onClick="stopService"
-        android:text="Stop Services"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="551dp"
-        android:layout_marginBottom="132dp"
-        android:onClick="broadcastIntent"
-        android:text="Broadcast Intent"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignEnd="@+id/editText3"
+        android:layout_alignRight="@+id/editText3"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="473dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="210dp"
+        android:onClick="onClickRetrieveStudents"
+        android:text="Retrive student"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
