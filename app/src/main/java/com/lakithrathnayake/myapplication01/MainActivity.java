@@ -149,8 +149,15 @@ public class MainActivity extends AppCompatActivity {
 
         b2 = findViewById(R.id.button2);
         b2.setOnClickListener(v -> {
-            Intent i = new Intent(android.content.Intent.ACTION_VIEW,
-                    Uri.parse("tel:0702102456"));
+            Intent i = new Intent("com.lakithrathnayake.myapplication01.LAUNCH",
+                    Uri.parse("https://www.google.com"));
+            startActivity(i);
+        });
+
+        b3 = findViewById(R.id.button3);
+        b3.setOnClickListener(v -> {
+            Intent i = new Intent("com.lakithrathnayake.myapplication01.LAUNCH",
+                    Uri.parse("http://www.google.com"));
             startActivity(i);
         });
     }

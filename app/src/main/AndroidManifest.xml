@@ -14,7 +14,14 @@
         tools:targetApi="31">
         <activity
             android:name=".CustomActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="com.lakithrathnayake.myapplication01.LAUNCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
