@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -138,27 +139,40 @@ public class MainActivity extends AppCompatActivity {
 //            } while (c.moveToNext());
 //        }
 
+//        b1 = findViewById(R.id.button);
+//        b1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"));
+//                startActivity(i);
+//            }
+//        });
+//
+//        b2 = findViewById(R.id.button2);
+//        b2.setOnClickListener(v -> {
+//            Intent i = new Intent("com.lakithrathnayake.myapplication01.LAUNCH",
+//                    Uri.parse("https://www.google.com"));
+//            startActivity(i);
+//        });
+//
+//        b3 = findViewById(R.id.button3);
+//        b3.setOnClickListener(v -> {
+//            Intent i = new Intent("com.lakithrathnayake.myapplication01.LAUNCH",
+//                    Uri.parse("http://www.google.com"));
+//            startActivity(i);
+//        });
+
         b1 = findViewById(R.id.button);
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"));
-                startActivity(i);
-            }
+        b2= findViewById(R.id.button2);
+
+        b1.setOnClickListener(v -> {
+            TextView textView = (TextView) findViewById(R.id.textView);
+            textView.setTextSize(25);
         });
 
-        b2 = findViewById(R.id.button2);
         b2.setOnClickListener(v -> {
-            Intent i = new Intent("com.lakithrathnayake.myapplication01.LAUNCH",
-                    Uri.parse("https://www.google.com"));
-            startActivity(i);
-        });
-
-        b3 = findViewById(R.id.button3);
-        b3.setOnClickListener(v -> {
-            Intent i = new Intent("com.lakithrathnayake.myapplication01.LAUNCH",
-                    Uri.parse("http://www.google.com"));
-            startActivity(i);
+            TextView textView = (TextView) findViewById(R.id.textView);
+            textView.setTextSize(55);
         });
     }
 }
