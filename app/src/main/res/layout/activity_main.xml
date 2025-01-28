@@ -157,20 +157,26 @@
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <androidx.fragment.app.FragmentContainerView
-        android:name="com.lakithrathnayake.myapplication01.LM_Fragment"
-        android:id="@+id/lm_fragment"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        tools:ignore="MissingConstraints" />
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:name="com.lakithrathnayake.myapplication01.LM_Fragment"-->
+<!--        android:id="@+id/lm_fragment"-->
+<!--        android:layout_weight="1"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <androidx.fragment.app.FragmentContainerView
-        android:name="com.lakithrathnayake.myapplication01.PM_Fragment"
-        android:id="@+id/pm_fragment"
-        android:layout_weight="2"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        tools:ignore="MissingConstraints" />
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:name="com.lakithrathnayake.myapplication01.PM_Fragment"-->
+<!--        android:id="@+id/pm_fragment"-->
+<!--        android:layout_weight="2"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.lakithrathnayake.myapplication01.MyListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

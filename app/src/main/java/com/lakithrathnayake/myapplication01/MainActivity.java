@@ -36,27 +36,27 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Log.d(msg, "The onCreate() event");
+//        Log.d(msg, "The onCreate() event");
 
-        Configuration config = getResources().getConfiguration();
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        if (config.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            /**
-             * Landscape mode of the device
-             */
-            LM_Fragment ls_fragment = new LM_Fragment();
-            fragmentTransaction.replace(android.R.id.content, ls_fragment);
-        }else{
-            /**
-             * Portrait mode of the device
-             */
-            PM_Fragment pm_fragment = new PM_Fragment();
-            fragmentTransaction.replace(android.R.id.content, pm_fragment);
-        }
-        fragmentTransaction.commit();
-    }
+//        Configuration config = getResources().getConfiguration();
+//        FragmentManager fragmentManager = getFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//
+//        if (config.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+//            /**
+//             * Landscape mode of the device
+//             */
+//            LM_Fragment ls_fragment = new LM_Fragment();
+//            fragmentTransaction.replace(android.R.id.content, ls_fragment);
+//        }else{
+//            /**
+//             * Portrait mode of the device
+//             */
+//            PM_Fragment pm_fragment = new PM_Fragment();
+//            fragmentTransaction.replace(android.R.id.content, pm_fragment);
+//        }
+//        fragmentTransaction.commit();
+//    }
 
 
     /** Called when the activity is about to become visible. */
@@ -108,32 +108,32 @@ public class MainActivity extends AppCompatActivity {
 //        sendBroadcast(intent);
 //    }
 
-    public void onClickAddName(View view) {
-        ContentValues values = new ContentValues();
-        values.put(StudentProvider.NAME, ((EditText)findViewById(R.id.editText2)).getText().toString());
-
-        values.put(StudentProvider.GRADE, ((EditText)findViewById(R.id.editText3)).getText().toString());
-
-        Uri uri = getContentResolver().insert(StudentProvider.CONTENT_URI, values);
-        Toast.makeText(getBaseContext(), uri.toString(), Toast.LENGTH_LONG).show();
-    }
-
-
-    @SuppressLint("Range")
-    public void onClickRetrieveStudents(View view) {
-        String URL = "content://com.lakithrathnayake.myapplication01.StudentProvider";
-
-        Uri students = Uri.parse(URL);
-        Cursor c = managedQuery(students, null, null, null, "name");
-
-        if (c.moveToFirst()) {
-            do{
-                Toast.makeText(this,
-                        c.getString(c.getColumnIndex(StudentProvider._ID)) +
-                                ", " +  c.getString(c.getColumnIndex( StudentProvider.NAME)) +
-                                ", " + c.getString(c.getColumnIndex( StudentProvider.GRADE)),
-                        Toast.LENGTH_SHORT).show();
-            } while (c.moveToNext());
-        }
+//    public void onClickAddName(View view) {
+//        ContentValues values = new ContentValues();
+//        values.put(StudentProvider.NAME, ((EditText)findViewById(R.id.editText2)).getText().toString());
+//
+//        values.put(StudentProvider.GRADE, ((EditText)findViewById(R.id.editText3)).getText().toString());
+//
+//        Uri uri = getContentResolver().insert(StudentProvider.CONTENT_URI, values);
+//        Toast.makeText(getBaseContext(), uri.toString(), Toast.LENGTH_LONG).show();
+//    }
+//
+//
+//    @SuppressLint("Range")
+//    public void onClickRetrieveStudents(View view) {
+//        String URL = "content://com.lakithrathnayake.myapplication01.StudentProvider";
+//
+//        Uri students = Uri.parse(URL);
+//        Cursor c = managedQuery(students, null, null, null, "name");
+//
+//        if (c.moveToFirst()) {
+//            do{
+//                Toast.makeText(this,
+//                        c.getString(c.getColumnIndex(StudentProvider._ID)) +
+//                                ", " +  c.getString(c.getColumnIndex( StudentProvider.NAME)) +
+//                                ", " + c.getString(c.getColumnIndex( StudentProvider.GRADE)),
+//                        Toast.LENGTH_SHORT).show();
+//            } while (c.moveToNext());
+//        }
     }
 }
