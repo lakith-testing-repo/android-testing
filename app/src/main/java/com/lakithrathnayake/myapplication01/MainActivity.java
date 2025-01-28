@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -24,6 +25,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     String msg = "Android: ";
+    Button b1, b2, b3;
 
     /** Called when the activity is first created. */
     @Override
@@ -135,5 +137,21 @@ public class MainActivity extends AppCompatActivity {
 //                        Toast.LENGTH_SHORT).show();
 //            } while (c.moveToNext());
 //        }
+
+        b1 = findViewById(R.id.button);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"));
+                startActivity(i);
+            }
+        });
+
+        b2 = findViewById(R.id.button2);
+        b2.setOnClickListener(v -> {
+            Intent i = new Intent(android.content.Intent.ACTION_VIEW,
+                    Uri.parse("tel:0702102456"));
+            startActivity(i);
+        });
     }
 }

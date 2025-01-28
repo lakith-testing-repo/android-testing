@@ -13,30 +13,38 @@
         android:theme="@style/Theme.MyApplication01"
         tools:targetApi="31">
         <activity
+            android:name=".CustomActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <service android:name=".MyService"/>
+        <service android:name=".MyService" />
 
-        <receiver android:name=".MyReceiver"
+        <receiver
+            android:name=".MyReceiver"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.BOOT_COMPLETED" >-->
-<!--                </action>-->
-<!--            </intent-filter>-->
-<!--            <intent-filter>-->
-<!--                <action android:name="com.lakithrathnayake.CUSTOM_INTENT" >-->
-<!--                </action>-->
-<!--            </intent-filter>-->
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.BOOT_COMPLETED" > -->
+            <!-- </action> -->
+            <!-- </intent-filter> -->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="com.lakithrathnayake.CUSTOM_INTENT" > -->
+            <!-- </action> -->
+            <!-- </intent-filter> -->
         </receiver>
+
         <provider
-            android:authorities="com.lakithrathnayake.myapplication01.StudentProvider"
-            android:name="StudentProvider" />
+            android:name=".StudentProvider"
+            android:authorities="com.lakithrathnayake.myapplication01.StudentProvider" />
+
     </application>
 
 </manifest>
